@@ -18,7 +18,7 @@ subtitle: "University of California, Santa Cruz, QUARTER YEAR"
 
 ## Welcome
 
-COURSE NUMBER: COURSE TITLE
+CSE101: Introduction to Data Structures and Algorithms
 UCSC CSE
 QUARTER YEAR
 
