@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#  Converts the markdown page to html and opens it in the browser, to preview it before publishing.
+#  Usage:  ./show            converts index.md and opens index.html
+#          ./show page.md    converts page.md  and opens page.html
+#
+#  Works on both macOS (Safari) and Linux (the default browser).
+
+set -e
+
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$ROOT"
+
+file="${1:-index.md}"
+
+if [ ! -f "$file" ]; then
+   echo "Error: $file not found."
+   exit 1
+fi
+
+#    Convert the markdown file to html.
+"$ROOT/md2html" "$file"
+
+page="${file%.*}.html"
+
+#    Open the page in the browser.
+if [ "$(uname)" = "Darwin" ]; then
+   open -a Safari "$ROOT/$page"
+else
+   xdg-open "$ROOT/$page" > /dev/null 2>&1 &
+fi

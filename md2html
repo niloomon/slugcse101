@@ -1,0 +1,143 @@
+#!/bin/bash
+
+#  Converts a .md file to .html.
+#  Usage:  ./md2html index.md
+#
+#  Note this assumes that the title of the page is in the file title.txt; otherwise, it takes the file name as the title.
+#  The style files styling.css and styling.js and the page template template.html
+#  live next to this script, so that this repository is self-contained.
+#
+#  Works on both macOS and Linux. It needs pandoc:
+#     macOS:  brew install pandoc
+#     Linux:  sudo apt install pandoc
+
+# Directory of this script, which is the root of the site.
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+
+if ! command -v pandoc > /dev/null 2>&1; then
+   echo "Error: pandoc is not installed."
+   echo "  On macOS, install it with:  brew install pandoc"
+   echo "  (and if brew itself is missing, see https://brew.sh)"
+   echo "  On Linux, install it with:  sudo apt install pandoc"
+   exit 1
+fi
+
+if [ -z "$1" ]; then
+   echo "Usage: $0 <file.md>"
+   exit 1
+fi
+
+folder=$(dirname "$1")
+name=$(basename "$1")
+bname="${name%.*}"
+
+
+#    The page links to styling.css and styling.js next to it.
+#    They already sit in the root; for a page in a subfolder, copy them there.
+if [ "$PWD" != "$ROOT" ]; then
+   cp "$ROOT/styling.css" .
+   cp "$ROOT/styling.js" .
+fi
+pref=""
+jspref=""
+
+if [ -s "title.txt" ]; then
+   # The file exists and is not empty.
+   pagename=$(cat "title.txt")
+else
+   file="$folder/$name"
+
+   # Extract the title from the YAML metadata if present.
+   pagename=$(awk '
+      BEGIN {in_block=0}
+      /^---$/ {
+         if (in_block) exit;
+         else {in_block=1; next}
+      }
+      in_block && /^title:/ {
+         sub(/^title:[ \t]*"?/, "", $0)
+         sub(/"?$/, "", $0)
+         print $0
+         exit
+      }
+   ' "$file")
+
+   if [ -z "$pagename" ]; then
+
+      # If the title is commented still read it.
+      pagename=$(awk '
+         BEGIN {in_block=0}
+         /^<!-----$/ {
+            if (in_block) exit;
+            else {in_block=1; next}
+         }
+         in_block && /^title:/ {
+            sub(/^title:[ \t]*"?/, "", $0)
+            sub(/"?$/, "", $0)
+            print $0
+            exit
+         }
+      ' "$file")
+   fi
+
+   if [ -z "$pagename" ]; then
+      pagename="$bname"
+   fi
+
+fi
+
+echo "<script src=\"${jspref}styling.js\"></script>" > include-js.html
+
+# markdown_strict instead of markdown would prevent Setext (-/=) headers.
+# The awk script below turns indented lines into list items and keeps
+# YAML blocks and fenced code blocks untouched.
+
+awk '
+  BEGIN {
+    in_yaml = 0
+    in_code = 0
+  }
+
+  # --- YAML handling ---
+  NR==1 && /^---$/ { in_yaml=1; print; next }
+  in_yaml && /^---$/ { in_yaml=0; print; next }
+  in_yaml { print; next }
+
+  # --- Fenced code block toggle ---
+  /^```/ {
+    in_code = !in_code
+    print
+    next
+  }
+
+  # --- Do nothing inside code blocks ---
+  in_code { print; next }
+
+  # --- List normalization ---
+  /^[ \t]*- / { print; next }
+  /^[ \t]+/ {
+    sub(/^[ \t]+/, "&- ")
+    print
+    next
+  }
+
+  { print }
+' "$name" | \
+pandoc -s \
+--from markdown+smart+lists_without_preceding_blankline-simple_tables-multiline_tables+hard_line_breaks \
+--to=html5 \
+--template="$ROOT/template.html" \
+--css="${pref}styling.css" \
+--metadata pagetitle="$pagename" \
+--include-in-header=include-js.html \
+-o "$bname.html" \
+--mathml
+
+# Note: unlike the homepage, the section headings here are not numbered,
+# so --number-sections is deliberately left out.
+
+# Note: In order to print the author and institution, the header of the default template is edited.
+
+rm -f include-js.html
+
+echo "Generated $folder/$bname.html"

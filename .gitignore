@@ -1,0 +1,5 @@
+.DS_Store
+._*
+.claude/
+include-js.html
+.fuse_hidden*

@@ -1,0 +1,670 @@
+/*
+ * I add this to html files generated with pandoc.
+ */
+
+/*.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}*/
+
+:root {
+  --navbar-height: 4em;
+}
+
+.navbar {
+   position: fixed;
+/*    position: sticky; */
+/*    left: 0; */
+   top: 0;
+   height: var(--navbar-height);
+/*    right: 0; */
+/*    height: 60px; */
+/*   text-align: center; */
+/*    width: 100%; */
+/*    left: 50%; */
+/*    transform: translateX(-50%); */
+/*    height: 100vh; */
+/*    justify-content: center; */
+   align-items: center;
+   display: flex;
+   background-color: #F8F8F8;
+/*    background-color: #F5F5F5; */
+/*    overflow: hidden; */
+   padding-left: 1.2em;
+   padding-right: 1.2em;
+/*    display: inline-block; */
+  /* Add more styling as needed */
+   padding: 0 20px;
+   z-index: 1000;
+/*    flex-shrink: 0; */
+}
+
+/* Offset content so it's not hidden behind navbar */
+/* .content { */
+/*   padding-top: 60px; */
+/*    margin-top: 60px; */
+/*    flex: 1; */
+/*    overflow-y: auto; */
+/*    padding: 20px;    */
+/*    padding-top: var(--navbar-height); */
+/* } */
+
+/*
+.navbar a {
+   display: inline-block;
+}
+*/
+
+html * {
+/*   font-size: 100%; */
+/*    font-size: 15px; */
+   font-size: 16px;
+   /*  The following hides outside bullets.   */
+   /*overflow-y: scroll;*/  
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+}
+
+body {
+/*    height: 100%; */
+   color: #000;
+/*   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; */
+   font-family: "Open Sans", sans-serif, Courier;
+/*    font-size: 15px; */
+   font-size: 16px;
+   line-height: 1.7;
+   padding: 1em;
+   margin: auto;
+   max-width: 42em;
+   background: #fefefe;
+/*    padding-top: var(--navbar-height); */
+/*    margin-top: 50px; */
+/*    overflow: hidden; /* Important: prevents body scroll */ */
+}
+
+/*.TextStyle {
+   font-family: "Open Sans", Courier;
+   font-size: 15px;
+   text-align: justify;
+   font-style: normal;
+   font-weight: normal;
+}*/
+
+
+a {
+/*   color: #0645ad; */
+  color: black;
+/*   text-decoration: none; */
+  text-decoration: underline;
+  scroll-margin-top: var(--navbar-height);  
+}
+
+a:visited {
+/*   color: #0b0080; */
+}
+
+a:hover {
+  color: #06e;
+}
+
+a:active {
+  color: #faa700;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+*::-moz-selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #000;
+}
+
+*::selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #000;
+}
+
+a::-moz-selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #0645ad;
+}
+
+a::selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #0645ad;
+}
+
+p {
+  margin: 1em 0;
+  text-align: justify
+/*   margin: 0em 0; */
+   white-space: pre-wrap;
+   /*  To preserve indentation  */
+}
+
+p.banner, p.title, h1.title {
+   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;   
+   color:  #303C6C;
+   line-height: 125%;
+   margin-top: 0.4em;
+   margin-bottom: 0em;
+   font-weight: normal;   
+   font-size: 1.8em;
+}
+
+
+p.fancy, p.subtitle, p.author, .author .name, .author .institute, .date {
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  color:  #303C6C;
+/*   margin: 1em 0; */
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left
+}
+
+p.emph {
+   color: green;
+  margin: 1em 0;
+}
+
+/*.right p {
+   text-align: right
+}*/
+
+/*.right * {
+   text-align: right
+}*/
+
+.right {
+   text-align: right
+}
+
+/*p.justify {
+   text-align: justify
+}*/
+
+body:has(.navbar) {
+  padding-top: var(--navbar-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;   
+  color:  #303C6C;
+  line-height: 125%;
+  margin-top: 1em;
+  font-weight: normal;
+  scroll-margin-top: var(--navbar-height);
+/*   scroll-margin-top: var(--navbar-height); */
+}
+
+h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 1.2em;  
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.5em;
+}
+
+h6 {
+  font-size: 0.5em;
+}
+
+/* To have numbers for headers */
+
+/*#page {
+	counter-reset: heading;
+	counter-reset: subheading;
+	counter-reset: subsubheading;
+}
+h1:before {
+	counter-increment: heading;
+}
+h1 {
+	counter-reset: subheading;
+}
+h2:before {
+	content: counter(subheading)". ";
+	counter-increment: subheading;
+}
+h2 {
+	counter-reset: subsubheading;
+}
+h3:before {
+	content: counter(subheading)"."counter(subsubheading)". ";
+	counter-increment: subsubheading;
+}*/
+
+
+blockquote {
+  color: #0d154a;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #EEE solid;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+/*   border-top: 1px solid #aaa; */
+/*   border-bottom: 1px solid #eee; */
+  margin: 1em 0;
+  padding: 0;
+  border-color: #303C6C;
+  background-color: #303C6C;
+  color: #303C6C;
+}
+
+pre, code, kbd, samp {
+  color: #000;
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 0.9em;
+/*   font-size: inherit; */
+  background-color: #f7f7f7;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Target pre and code blocks with sourceCode class, any language */
+pre.sourceCode[class*="sourceCode"],
+pre.sourceCode[class*="sourceCode"] code,
+code.sourceCode[class*="sourceCode"] {
+  color: #000;
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 0.95em;
+/*   font-size: inherit; */
+  background-color: #f7f7f7;
+  overflow-x: auto;           /* ✅ allows horizontal scrolling */  
+}
+
+/* Make syntax highlighting spans inherit font-size */
+pre.sourceCode[class*="sourceCode"] span,
+code.sourceCode[class*="sourceCode"] span {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.sourceCode {
+  position: relative; /* so the button can be placed inside */
+/*   display: inline-block; */
+}
+.sourceCode .copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+/*   font-size: 14px; */
+  font-size: 1em;
+  cursor: pointer;
+  opacity: 0.6;
+  user-select: none;
+}
+.sourceCode .copy-btn:hover {
+  opacity: 1;
+}
+
+.copy-btn {
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;   /* slightly wider than the icon */
+  height: 2em;    /* match one line of text */
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+/*   background-color: #f9f9f9; */
+  cursor: pointer;
+}
+.copy-btn svg {
+  display: block;                /* remove inline spacing around SVG */
+  width: 0.85em;      /* icon matches line height */
+  height: 0.85em;
+}
+
+/*
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #eee;
+  border: none;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #ddd;
+}*/
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ************************************* */
+
+ol {
+  list-style-position: outside;
+  padding-left: 1.5rem; 
+}
+
+/* ************************************* */
+/* margin: top | right | bottom | left */
+
+/*   margin-top: 0; */
+/*   padding: 0 0 0 2em; */
+/*    margin-left: 40px; */
+/*    padding-left: 0px;   */
+
+/* ************************************* */
+ul {
+   margin-top: 0;
+   padding-left: 1rem;
+   list-style-type: disc;
+/*    list-style-type: circle; */
+/*    list-style-position: outside; */
+}
+
+/* Level 4 and deeper: no bullets */
+ul ul ul ul,
+ul ul ul ul ul,
+ul ul ul ul ul ul 
+ul ul ul ul ul ul ul
+ul ul ul ul ul ul ul ul
+ul ul ul ul ul ul ul ul ul
+ul ul ul ul ul ul ul ul ul ul {
+    list-style-type: none;
+}
+/* ************************************* */
+ul.airlist {
+   list-style: none;
+   padding-left: 0;
+   margin-bottom: 1em;
+   margin-left: 0;
+}
+
+ul.airlist > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding: 0;
+  display: contents;   /* removes its visual effect */
+}
+
+ul.airlist li > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding-left: 1em; /* indent true nested lists */
+}
+
+/* To use the name air */
+
+ul.air {
+   list-style: none;
+   padding-left: 0;
+   margin-bottom: 1em;
+   margin-left: 0;
+}
+
+ul.air > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding: 0;
+  display: contents;   /* removes its visual effect */
+}
+
+ul.air li > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding-left: 1em; /* indent true nested lists */
+}
+
+/* ************************************* */
+
+dl {
+  margin-bottom: 1em;
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: .8em;
+}
+
+dd {
+  margin: 0 0 .8em 2em;
+}
+
+dd:last-child {
+  margin-bottom: 0;
+}
+
+/*  Prevent scaling */
+img {   
+/*   margin: auto;  */
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  /* The template had the following.  */
+/*   max-width: 100%;  */
+  max-width: 33%;
+/*   max-width: 30%; */
+/*   height: auto; */
+/*   width: auto; */
+}
+
+figure {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+figure img {
+  border: none;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0 0 .8em;
+}
+
+table {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: .2em 1em;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+table td {
+  padding: .2em 1em;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  vertical-align: top;
+}
+
+/*.author {
+  font-size: 1.2em;
+  text-align: center;
+}*/
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    max-width: 100%;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-outside: avoid;
+  }
+
+  tr, img {
+    page-break-outside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page :left {
+    margin: 15mm 20mm 15mm 10mm;
+}
+
+  @page :right {
+    margin: 15mm 10mm 15mm 20mm;
+}
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+.header-section-number {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-right: 0.2em;
+}
+
+.header-section-number::after {
+  content: ". ";
+}
+
+/* pull the list up */
+/*p + ul, p + ol {
+  margin-top: -0.5em;
+}
+*/
+
+ul, ol {
+  margin-top: 0;
+}
+
+/*zeroing paragraph margins inside list items:*/
+li > p {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+/*This targets any <p> that is immediately followed by a <ul> or <ol> and removes its bottom margin.*/
+p:has(+ ul), p:has(+ ol) {
+  margin-bottom: 0;
+}
