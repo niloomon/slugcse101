@@ -1,5 +1,5 @@
 Course homepage
-https://niloomon.github.io/slugcse101/
+https://niloomon.github.io/CSE101-Website/
 
 This is a template. Everything written in CAPITALS in index.md is a placeholder
 to fill in or delete.
@@ -39,7 +39,7 @@ How to publish it
    ./update
 
 This converts index.md to index.html and pushes everything to GitHub, which
-publishes it at https://niloomon.github.io/slugcse101/ within a minute.
+publishes it at https://niloomon.github.io/CSE101-Website/ within a minute.
 
 To use your own commit message:  ./update "Add week 3 slides"
 
@@ -47,8 +47,8 @@ To use your own commit message:  ./update "Add week 3 slides"
 Folders
 -------
 
-   lectures/    the lecture slides; link them from the Slides column of the
-                schedule tables, like this:  [slides](lectures/L1.pdf)
+   materials/slides/      public PDF slide exports
+   materials/worksheets/  public worksheet files
    images/      pictures used in the page, such as a banner at the top
 
 The rest of the files are machinery: md2html does the markdown to html
