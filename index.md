@@ -91,8 +91,8 @@ By the end of the course, students should be able to:
 | Binary Search and BST | [PPT](https://1drv.ms/p/c/6e432cb3cc755285/IQALZfVlurVlRofb-0MxLnxlAX5St9f16TRq82r3jjfzrgE?e=fGQJNs) | 
 | Balanced Trees - AVL | [PPT](https://1drv.ms/p/c/6e432cb3cc755285/IQDNLxWe1LAWRZhxzEReRUfqAepIrlh_aOFvPxKLbHxoa5g?e=eXN8kt) | 
 | Priority Queues - Heap | [PPT](https://1drv.ms/p/c/6e432cb3cc755285/IQC0ejw67KXyQ6GFFWvPxfHGAQXmlVD7_aYmxITcK6Zgewo?e=5lZr4H) | 
-| Advanced Sorting Algorithms | [MergeSort](https://1drv.ms/b/c/6e432cb3cc755285/IQAd_Wg0-kUlTqGVN_3xQogzAczb7asjjdmkVON1GSsH6R0?e=3FaFYc)    [QuickSort](https://1drv.ms/p/c/6e432cb3cc755285/IQDkzEnmqTd0Q7P2TOF3mTCzAasWFo6cr1vroebLgcNglhA?e=bTLcFZ) | 
-| Graphs | [Graph Theory](https://1drv.ms/p/c/6e432cb3cc755285/IQBNaB7ANnBvRrGsY5lmoqqHASzFvk-M4jYwpep9IOMbRZE?e=WubeMC)    [BFS](https://1drv.ms/p/c/6e432cb3cc755285/IQB7uYhQv8-wR5fC_6kc-fWqASh-8xctucZcJjKLQXkXPAQ?e=hvjr0Q)    [DFS](https://1drv.ms/p/c/6e432cb3cc755285/IQCYZDQjdpsZS5UTSbtjmcK6AQkgrJn9AQ-u55kZ_tuHRfk?e=rOEgvi) | 
+| Advanced Sorting Algorithms | [MergeSort](https://1drv.ms/b/c/6e432cb3cc755285/IQAd_Wg0-kUlTqGVN_3xQogzAczb7asjjdmkVON1GSsH6R0?e=3FaFYc)  -  [QuickSort](https://1drv.ms/p/c/6e432cb3cc755285/IQDkzEnmqTd0Q7P2TOF3mTCzAasWFo6cr1vroebLgcNglhA?e=bTLcFZ) | 
+| Graphs | [Graph Theory](https://1drv.ms/p/c/6e432cb3cc755285/IQBNaB7ANnBvRrGsY5lmoqqHASzFvk-M4jYwpep9IOMbRZE?e=WubeMC)  -  [BFS](https://1drv.ms/p/c/6e432cb3cc755285/IQB7uYhQv8-wR5fC_6kc-fWqASh-8xctucZcJjKLQXkXPAQ?e=hvjr0Q)  -  [DFS](https://1drv.ms/p/c/6e432cb3cc755285/IQCYZDQjdpsZS5UTSbtjmcK6AQkgrJn9AQ-u55kZ_tuHRfk?e=rOEgvi) | 
 | Hashing | [PPT](https://1drv.ms/p/c/6e432cb3cc755285/IQDbL1rPt6nzQZi7a5Nh9IPpAVjw73iL-xcCGsszY-WPHjY?e=kbliIl) | 
 
 **************************************************
@@ -107,7 +107,7 @@ By the end of the course, students should be able to:
 | Test1 Worksheet | [Google Doc](https://drive.google.com/open?id=1jCpepvJ4Ep9GBWpksUkDXQGxHujSb_bv&usp=drive_fs) |
 | HW1 Worksheet| [Google Doc](https://docs.google.com/document/d/1wFs85B5o-bOrLnxu4E7erQytv0uqKTrT6UfTQdwsUlE?usp=drive_fs) |
 | HW2 Worksheet | [Google Doc](https://docs.google.com/document/d/1Y-vhI3Y-JUb4FAnxrZbRV0V8U0fbQBqmYvnhX-Oq0Wc/edit?usp=sharing) |
-| HW3 Worksheet | [Part 1 - BST](https://docs.google.com/document/d/1N6nnjzLiRm4GpjLLD8B1dOL0F3JTNQvb2kdNvQRBaJs?usp=drive_fs)    [Part 2 - AVL](https://docs.google.com/document/d/1WgsQB1A87nxOZM7FT-hURIh-bAFQUJfNMLXCxb-g7xA?usp=drive_fs) |
+| HW3 Worksheet | [Part 1 - BST](https://docs.google.com/document/d/1N6nnjzLiRm4GpjLLD8B1dOL0F3JTNQvb2kdNvQRBaJs?usp=drive_fs)  -  [Part 2 - AVL](https://docs.google.com/document/d/1WgsQB1A87nxOZM7FT-hURIh-bAFQUJfNMLXCxb-g7xA?usp=drive_fs) |
 | HW4 Worksheet | [Google Doc](https://docs.google.com/document/d/1dpFGbSYzDhPuMk0Ge_cx7jt2xSvjsKbZr7QI_PIu-Ow?usp=drive_fs) |
 | Dijkstra's Worksheet | [PDF](https://drive.google.com/open?id=1jCpepvJ4Ep9GBWpksUkDXQGxHujSb_bv&usp=drive_fs) |
 
