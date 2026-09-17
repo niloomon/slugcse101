@@ -9,11 +9,7 @@ subtitle: "University of California, Santa Cruz"
 ![Running slugs](images/running_slugs.jpg "CSE 101")
 
 **************************************************
-# Learning Outcomes
-
-CSE 101 introduces core data structures and algorithmic techniques used to design efficient software. The public materials on this site focus on learning goals, lecture slides, and worksheets.
-
-## Course-Level Outcomes
+# Course-Level Outcomes
 
 By the end of the course, students should be able to:
 
