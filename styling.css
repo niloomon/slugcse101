@@ -763,3 +763,16 @@ body > figure + hr { clear: none; }
 /* no caption under the banner */
 body > figure figcaption { display: none; }
 body > figure { margin-top: 0.8em; }
+
+/* One text size across the page, matching the outcome lines (13.6px).
+   Headings keep their own sizes. Outcome sub-bullets stay smaller. */
+p, li, td, th, dt, dd, blockquote, figcaption, h3 {
+   font-size: 13.6px;
+}
+details.outcome > summary {
+   font-size: 13.6px;
+}
+details.outcome > ul,
+details.outcome > ul > li {
+   font-size: 11.5px;
+}
