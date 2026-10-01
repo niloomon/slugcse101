@@ -90,6 +90,10 @@ subtitle: "University of California, Santa Cruz"
 </div>
 
 
+::: {.two-col}
+
+::: {.col}
+
 # Slides
 
 
@@ -107,7 +111,10 @@ subtitle: "University of California, Santa Cruz"
 | Graphs | [Graph Theory](https://1drv.ms/p/c/6e432cb3cc755285/IQBNaB7ANnBvRrGsY5lmoqqHASzFvk-M4jYwpep9IOMbRZE?e=WubeMC)  -  [BFS](https://1drv.ms/p/c/6e432cb3cc755285/IQB7uYhQv8-wR5fC_6kc-fWqASh-8xctucZcJjKLQXkXPAQ?e=hvjr0Q)  -  [DFS](https://1drv.ms/p/c/6e432cb3cc755285/IQCYZDQjdpsZS5UTSbtjmcK6AQkgrJn9AQ-u55kZ_tuHRfk?e=rOEgvi) | 
 | Hashing | [PPT](https://1drv.ms/p/c/6e432cb3cc755285/IQDbL1rPt6nzQZi7a5Nh9IPpAVjw73iL-xcCGsszY-WPHjY?e=kbliIl) | 
 
-**************************************************
+:::
+
+::: {.col}
+
 # Worksheets
 
 
@@ -124,6 +131,11 @@ subtitle: "University of California, Santa Cruz"
 | HW4 Worksheet | [Google Doc](https://docs.google.com/document/d/1dpFGbSYzDhPuMk0Ge_cx7jt2xSvjsKbZr7QI_PIu-Ow?usp=drive_fs) |
 | Dijkstra's Worksheet | [PDF](https://drive.google.com/file/d/1aWM0wQ-Fv086btnLcraVp18pfPozfs1l/view?usp=drive_link) |
 
+:::
+
+:::
+
+**************************************************
 **************************************************
 
 <!--
