@@ -804,3 +804,26 @@ details.outcome > ul > li {
    .hero { display: block; }
    .hero-figure { margin-bottom: 1em; }
 }
+
+/* Slides and Worksheets side by side, so neither table stretches the full width
+   and the page is roughly half as tall. Stacks again on narrow screens. */
+@media only screen and (min-width: 900px) {
+   h1#slides,
+   h1#slides + table {
+      float: left;
+      width: 48%;
+      clear: left;
+   }
+   h1#worksheets,
+   h1#worksheets + table {
+      float: right;
+      width: 48%;
+      clear: right;
+   }
+   h1#slides + table + hr {
+      display: none;          /* the rule that used to sit between them */
+   }
+   h1#worksheets + table + hr {
+      clear: both;
+   }
+}
