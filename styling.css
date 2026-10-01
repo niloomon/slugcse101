@@ -759,3 +759,7 @@ h1#learning-outcomes {
 }
 
 body > figure + hr { clear: none; }
+
+/* no caption under the banner */
+body > figure figcaption { display: none; }
+body > figure { margin-top: 0.8em; }

@@ -6,9 +6,9 @@ subtitle: "University of California, Santa Cruz"
 **************************************************
 ### | [Learning Outcomes](#learning-outcomes) | [Slides](#slides) | [Worksheets](#worksheets) |
 
+**************************************************
 ![Slugs BST](images/slug-bst.png "CSE 101")
 
-**************************************************
 # Course-Level Outcomes {#learning-outcomes}
 
 By the end of the course, students should be able to:
