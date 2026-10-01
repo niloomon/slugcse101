@@ -715,3 +715,47 @@ details.outcome > ul {
    color: #5a6275;
    line-height: 1.45;
 }
+
+
+/* Banner beside the outcomes, so the top of the page is not a tall stack.
+   The figure floats; the heading and the outcome list flow next to it.
+   Added 1 Oct 2026. */
+figure.banner-left,
+#course-level-outcomes + p + details,
+body > figure:first-of-type {
+   /* placeholder so the rules below can be overridden in one place */
+}
+
+body > figure {
+   float: left;
+   width: 300px;
+   max-width: 38%;
+   margin: 0.2em 2em 1em 0;
+}
+
+body > figure img {
+   max-width: 100%;
+}
+
+/* separators and section headings start a clean line again */
+hr,
+h1 {
+   clear: both;
+}
+
+/* ...except the outcomes heading, which should sit beside the image */
+h1#learning-outcomes {
+   clear: none;
+   margin-top: 0;
+}
+
+@media only screen and (max-width: 700px) {
+   body > figure {
+      float: none;
+      width: auto;
+      max-width: 100%;
+      margin: 1em 0;
+   }
+}
+
+body > figure + hr { clear: none; }
