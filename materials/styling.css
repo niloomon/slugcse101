@@ -509,7 +509,7 @@ img {
   vertical-align: middle;
   /* The template had the following.  */
 /*   max-width: 100%;  */
-  max-width: 33%;
+  max-width: 60%;
 /*   max-width: 30%; */
 /*   height: auto; */
 /*   width: auto; */
@@ -667,4 +667,40 @@ li > p {
 /*This targets any <p> that is immediately followed by a <ul> or <ol> and removes its bottom margin.*/
 p:has(+ ul), p:has(+ ol) {
   margin-bottom: 0;
+}
+
+/* Collapsible course outcomes: the summary line is always visible, the
+   detail bullets appear when it is clicked. Added 1 Oct 2026. */
+details.outcome {
+   border-bottom: 1px solid #e2e2e2;
+   padding: 0.45em 0;
+}
+details.outcome:first-of-type {
+   border-top: 1px solid #e2e2e2;
+}
+details.outcome > summary {
+   cursor: pointer;
+   list-style: none;
+   padding-left: 1.4em;
+   text-indent: -1.4em;
+}
+details.outcome > summary::-webkit-details-marker {
+   display: none;
+}
+details.outcome > summary::before {
+   content: "\25B8";          /* ▸ */
+   display: inline-block;
+   width: 1.4em;
+   text-indent: 0;
+   color: #8a8a8a;
+   transition: transform 0.15s ease;
+}
+details.outcome[open] > summary::before {
+   content: "\25BE";          /* ▾ */
+}
+details.outcome > summary:hover {
+   color: #1a4a7a;
+}
+details.outcome > ul {
+   margin: 0.5em 0 0.3em 0;
 }
