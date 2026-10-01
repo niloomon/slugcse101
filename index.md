@@ -7,12 +7,13 @@ subtitle: "University of California, Santa Cruz"
 ### | [Learning Outcomes](#learning-outcomes) | [Slides](#slides) | [Worksheets](#worksheets) |
 
 **************************************************
-![Slugs BST](images/slug-bst.png "CSE 101")
-
-# Course-Level Outcomes {#learning-outcomes}
-
-By the end of the course, students should be able to:
-
+<div class="hero">
+<div class="hero-figure">
+<img src="images/slug-bst.png" alt="Slugs BST" />
+</div>
+<div class="hero-text">
+<h1 id="learning-outcomes">Course-Level Outcomes</h1>
+<p>By the end of the course, students should be able to:</p>
 <details class="outcome">
 <summary>Apply systematic problem-solving techniques and recursive reasoning to algorithm design and implementation.</summary>
 <ul>
@@ -85,6 +86,9 @@ By the end of the course, students should be able to:
 <li>Evaluate algorithm correctness by identifying and testing edge and corner cases.</li>
 </ul>
 </details>
+</div>
+</div>
+
 
 # Slides
 
