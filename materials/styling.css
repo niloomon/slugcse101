@@ -74,9 +74,9 @@ body {
 /*    font-size: 15px; */
    font-size: 16px;
    line-height: 1.7;
-   padding: 1em;
+   padding: 1em 2.5em;
    margin: auto;
-   max-width: 42em;
+   max-width: none;   /* full window width; was 42em */
    background: #fefefe;
 /*    padding-top: var(--navbar-height); */
 /*    margin-top: 50px; */
@@ -510,6 +510,8 @@ img {
   /* The template had the following.  */
 /*   max-width: 100%;  */
   max-width: 60%;
+  /* keep the banner sensible now that the page is full width */
+  max-width: min(60%, 460px);
 /*   max-width: 30%; */
 /*   height: auto; */
 /*   width: auto; */
@@ -683,6 +685,8 @@ details.outcome > summary {
    list-style: none;
    padding-left: 1.4em;
    text-indent: -1.4em;
+   font-size: 0.85em;
+   line-height: 1.45;
 }
 details.outcome > summary::-webkit-details-marker {
    display: none;
@@ -701,6 +705,13 @@ details.outcome[open] > summary::before {
 details.outcome > summary:hover {
    color: #1a4a7a;
 }
+details.outcome > ul > li {
+   font-size: inherit;   /* list items are reset to 16px elsewhere; keep them at the list size */
+}
+
 details.outcome > ul {
-   margin: 0.5em 0 0.3em 0;
+   margin: 0.4em 0 0.5em 1.9em;   /* indented under the outcome text */
+   font-size: 0.72em;
+   color: #5a6275;
+   line-height: 1.45;
 }

@@ -112,10 +112,11 @@ By the end of the course, students should be able to:
 | Asymptotic analysis practice | [Google Doc](https://docs.google.com/document/d/142dBhZu7qZFsBzS_y7oPFJFFbTp6R4t84TL2aVdPO9w?usp=drive_fs) |
 | HW0 Worksheet | [Google Doc](https://docs.google.com/document/d/1oZ8pD1-TGLcxir5Sxp9PzIxMNMemT80bCc1NQtr6iFE?usp=drive_fs) |
 | Test1 Worksheet | Coming Soon |
-| Test1 Worksheet | [Google Doc](https://drive.google.com/open?id=1jCpepvJ4Ep9GBWpksUkDXQGxHujSb_bv&usp=drive_fs) |
 | HW1 Worksheet| [Google Doc](https://docs.google.com/document/d/1wFs85B5o-bOrLnxu4E7erQytv0uqKTrT6UfTQdwsUlE?usp=drive_fs) |
 | HW2 Worksheet | [Google Doc](https://docs.google.com/document/d/1Y-vhI3Y-JUb4FAnxrZbRV0V8U0fbQBqmYvnhX-Oq0Wc/edit?usp=sharing) |
+| Test2 Worksheet | [Google Doc](https://docs.google.com/document/d/1-ttdnPwfFI6SfsC1-SlCr8DLYaC7ixA3us7VK5Iqiqo/view?usp=sharing) |
 | HW3 Worksheet | [Part 1 - BST](https://docs.google.com/document/d/1N6nnjzLiRm4GpjLLD8B1dOL0F3JTNQvb2kdNvQRBaJs?usp=drive_fs)  -  [Part 2 - AVL](https://docs.google.com/document/d/1WgsQB1A87nxOZM7FT-hURIh-bAFQUJfNMLXCxb-g7xA?usp=drive_fs) |
+| Test3 Worksheet | Coming Soon |
 | HW4 Worksheet | [Google Doc](https://docs.google.com/document/d/1dpFGbSYzDhPuMk0Ge_cx7jt2xSvjsKbZr7QI_PIu-Ow?usp=drive_fs) |
 | Dijkstra's Worksheet | [PDF](https://drive.google.com/file/d/1aWM0wQ-Fv086btnLcraVp18pfPozfs1l/view?usp=drive_link) |
 
